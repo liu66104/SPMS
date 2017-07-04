@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.administrator.spms.refresh.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iv_refresh_two"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <include layout="@layout/allview_refresh_head" />
+    <!-- 支持所有实现Pullable接口的View -->
+
+
+    <com.example.administrator.spms.refresh.PullableScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten">
+
+                <TextView
+                    android:id="@+id/tv_tag_power_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:textSize="@dimen/text_twenty" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/thirty"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:src="@drawable/text_shape_green"
+                        android:id="@+id/iv_state"
+                        android:layout_width="@dimen/twenty"
+                        android:layout_height="@dimen/twenty"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:ellipsize="end"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/tv_tv_power_two_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_state"
+                        android:layout_centerHorizontal="true"
+                        android:text="" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:src="@mipmap/moren"
+                        android:id="@+id/iv_sun"
+                        android:layout_width="@dimen/forty"
+                        android:layout_height="@dimen/forty"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/tv_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginRight="@dimen/ten"
+                        android:layout_toLeftOf="@+id/iv_sun"
+                        android:text="" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/power_rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:textSize="14sp"
+                        android:id="@+id/tv_power_two_tag"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_power_two_tag"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/iv_power_two_tag"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/twelve"
+                        android:src="@mipmap/fusheliang"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_tag0_power_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/tv_num_power_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="80dp"
+                        android:text=""
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <View
+                        android:id="@+id/tag_power_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="39dp"
+                        android:background="@color/color_operate">
+
+                    </View>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/power_rl1"
+                    android:id="@+id/power_rl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:textSize="14sp"
+                        android:id="@+id/tv_power_two_tag1"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_toRightOf="@+id/iv_power_two_tag2"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/iv_power_two_tag2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/twelve"
+                        android:src="@mipmap/fusheliang"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_tag_power"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_num_power_two1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="80dp"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textSize="@dimen/text_sixteen" />
+
+
+                    <View
+                        android:id="@+id/tag2_power_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="39dp"
+                        android:background="@color/color_operate">
+
+                    </View>
+                </RelativeLayout>
+                 <RelativeLayout
+                     android:layout_below="@+id/power_rl2"
+                     android:id="@+id/power_rl3"
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp">
+
+                     <TextView
+                         android:layout_marginLeft="@dimen/five"
+                         android:textSize="14sp"
+                         android:id="@+id/textView6"
+                         android:layout_width="120dp"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_toRightOf="@+id/iv_power_two_tag3"
+                         android:text="" />
+
+                     <ImageView
+                         android:id="@+id/iv_power_two_tag3"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:layout_centerVertical="true"
+                         android:layout_marginLeft="@dimen/twelve"
+                         android:src="@mipmap/fusheliang"
+                         android:visibility="gone" />
+
+                     <RelativeLayout
+                         android:layout_centerVertical="true"
+                         android:layout_alignParentRight="true"
+                         android:layout_marginRight="10dp"
+                         android:layout_width="60dp"
+                         android:layout_height="wrap_content">
+                         <TextView
+                             android:id="@+id/tv_tag2_power"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="" />
+                     </RelativeLayout>
+
+
+                     <TextView
+                         android:id="@+id/tv_num_power_two2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_alignParentRight="true"
+                         android:layout_marginRight="80dp"
+                         android:text=""
+                         android:textSize="@dimen/text_sixteen" />
+
+                     <View
+                         android:id="@+id/tag3_power_one"
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"
+                         android:layout_marginTop="39dp"
+                         android:background="@color/color_operate">
+
+                     </View>
+                 </RelativeLayout>
+
+
+               <RelativeLayout
+                   android:id="@+id/power_rl4"
+                   android:layout_below="@+id/power_rl3"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp">
+                   <TextView
+                       android:textSize="14sp"
+                       android:id="@+id/tv_power_two_tag3"
+                       android:layout_width="120dp"
+                       android:layout_height="wrap_content"
+                       android:layout_centerVertical="true"
+                       android:layout_marginLeft="@dimen/five"
+                       android:layout_toRightOf="@+id/iv_power_two_tag4"
+                       android:text="" />
+
+
+                   <ImageView
+                       android:id="@+id/iv_power_two_tag4"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:layout_centerVertical="true"
+                       android:layout_marginLeft="@dimen/twelve"
+                       android:src="@mipmap/rizhao"
+                       android:visibility="gone" />
+                   <RelativeLayout
+                       android:layout_centerVertical="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginRight="10dp"
+                       android:layout_width="60dp"
+                       android:layout_height="wrap_content">
+                       <TextView
+                           android:id="@+id/tv_tag3_power"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="" />
+                   </RelativeLayout>
+
+
+
+
+                   <TextView
+                       android:id="@+id/textView2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerVertical="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginRight="80dp"
+                       android:text=""
+                       android:textSize="@dimen/text_sixteen" />
+
+
+                   <View
+                       android:id="@+id/tag4_power_one"
+                       android:layout_width="match_parent"
+                       android:layout_height="1dp"
+                       android:layout_marginTop="39dp"
+                       android:background="@color/color_operate">
+
+                   </View>
+
+               </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/power_rl5"
+                    android:layout_below="@+id/power_rl4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:textSize="14sp"
+                        android:id="@+id/textView"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_toRightOf="@+id/iv_power_two_tag5"
+                        android:text="" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_power_two_tag5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/twelve"
+                        android:src="@mipmap/rizhao"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_tag4_power"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="80dp"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:textSize="@dimen/text_sixteen" />
+
+
+                    <View
+                        android:id="@+id/tag5_power_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="39dp"
+                        android:background="@color/color_operate">
+
+                    </View>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_below="@+id/power_rl5"
+                    android:id="@+id/power_rl6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:textSize="14sp"
+                        android:id="@+id/tv_power_two_tag4"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_toRightOf="@+id/iv_power_two_tag6"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/iv_power_two_tag6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                       android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/twelve"
+                        android:src="@mipmap/huanjing"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_tag5_power"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="80dp"
+                        android:text=""
+                        android:textSize="@dimen/text_sixteen" />
+
+
+                    <View
+                        android:id="@+id/tag6_power_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="39dp"
+                        android:background="@color/color_operate">
+
+                    </View>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_below="@+id/power_rl6"
+                    android:id="@+id/power_rl7"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:id="@+id/tv_power_two_tag5"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/five"
+                        android:layout_toRightOf="@+id/iv_power_two_tag7"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/iv_power_two_tag7"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/twelve"
+                        android:src="@mipmap/zujian"
+                        android:visibility="gone" />
+                    <RelativeLayout
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_tag6_power"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_num_power_two5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="80dp"
+                        android:text=""
+                        android:textSize="@dimen/text_sixteen" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="39dp"
+                        android:background="@color/color_operate">
+                    </View>
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </com.example.administrator.spms.refresh.PullableScrollView>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/allview_load_more" />
+
+</com.example.administrator.spms.refresh.PullToRefreshLayout>

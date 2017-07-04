@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_login4_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/eighty"
+        android:text="@string/login4_title"
+        android:textSize="@dimen/text_twenty" />
+    <LinearLayout
+        android:layout_marginTop="@dimen/fifty"
+        android:id="@+id/ll_login"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/forty">
+
+        <TextView
+            android:id="@+id/tv_login4_title1"
+            android:layout_marginTop="@dimen/three"
+            android:text="@string/login_loginName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_username_login4"
+            android:layout_width="@dimen/OneHundredAndTen"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_login4_yes"
+        android:textColor="@color/color_button"
+        android:layout_marginTop="@dimen/fifty"
+        android:text="@string/login2_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_style"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty" />
+    <Button
+        android:id="@+id/btn_login4_no"
+        android:textColor="@color/color_button"
+        android:layout_marginTop="@dimen/twenty"
+        android:text="@string/login2_button1"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_style1"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty" />
+</LinearLayout>

@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/software_textColor_selected">
+
+        <TextView
+            android:singleLine="true"
+            android:maxEms="10"
+            android:ellipsize="end"
+            android:id="@+id/tv_title_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/color_button"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_search_alarm"
+            android:layout_width="@dimen/Twenty_five"
+            android:layout_height="@dimen/Twenty_five"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/five"
+            android:layout_toLeftOf="@+id/iv_menu_alert"
+            android:src="@mipmap/search" />
+
+        <ImageView
+            android:id="@+id/iv_menu_alert"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/menu" />
+
+        <ImageView
+            android:id="@+id/iv_back_equipments"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/twelve"
+            android:src="@mipmap/back_two"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--报警详细-->
+    <LinearLayout
+        android:id="@+id/ll_alert1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_alert_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textSize="22sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_gray">
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:background="@null" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_gray">
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:background="@color/colorBackground" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_gray">
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:background="@color/colorBackground"
+                    android:prompt="@string/planet_prompt" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_alarm_find"
+                android:layout_width="50dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_blue_button"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/color_button" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_gray">
+
+                <RelativeLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/view"
+                        android:layout_toStartOf="@+id/view"
+                        android:src="@mipmap/lan" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="62dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll1"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:ellipsize="end"
+                        android:maxEms="3"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:ellipsize="end"
+                        android:maxEms="3"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll3"
+                    android:layout_width="61dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll2"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll4"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll3"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll4"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:ellipsize="end"
+                        android:maxEms="4"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/tv_alarm_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/tv_alarm_5_1"
+                        android:layout_toRightOf="@+id/tv_alarm_5_1"
+                        android:ellipsize="end"
+                        android:maxEms="4"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lv_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--报警搜索-->
+
+    <LinearLayout
+        android:id="@+id/ll_alert2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/search_et_inputs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/search_edittext_shape"
+                    android:drawableLeft="@mipmap/search_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="请输入关键字"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/search_iv_deletes"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/iv_delete_bg"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/search_btn_backs"
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_search_bg"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_gray">
+
+                <RelativeLayout
+                    android:id="@+id/ll1s"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_1s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_1_1s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+
+                    <View
+                        android:id="@+id/views"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll1s"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/views"
+                        android:layout_toStartOf="@+id/views"
+                        android:src="@mipmap/lan" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/ll2s"
+                    android:layout_width="55dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll1s"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:maxEms="3"
+                        android:ellipsize="end"
+                        android:id="@+id/tv_alarm_2s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:maxEms="3"
+                        android:ellipsize="end"
+                        android:id="@+id/tv_alarm_2_1s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll2s"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll3s"
+                    android:layout_width="55dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll2s"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_3s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_3_1s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll3s"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll4s"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll3s"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:id="@+id/tv_alarm_4s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm_4_1s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll4s"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#A09F9F" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll5s"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/ll4s"
+                    android:background="@drawable/change_black">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:maxEms="4"
+                        android:ellipsize="end"
+                        android:id="@+id/tv_alarm_5s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/tv_alarm_5_1s"
+                        android:layout_toRightOf="@+id/tv_alarm_5_1s"
+                        android:text=""
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:maxEms="4"
+                        android:ellipsize="end"
+                        android:id="@+id/tv_alarm_5_1s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_ll5s"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/lan" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lv_alarms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

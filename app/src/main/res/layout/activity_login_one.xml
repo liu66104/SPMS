@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_login1_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/eighty"
+        android:text="@string/login1_title"
+        android:textSize="@dimen/text_twenty" />
+
+    <TextView
+        android:id="@+id/tv_login1_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ten"
+        android:text="@string/login1_title1"
+        android:textSize="@dimen/text_twenty" />
+
+    <EditText
+        android:id="@+id/et_login_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty"
+        android:layout_marginTop="@dimen/ten" />
+
+    <TextView
+        android:id="@+id/tv_login1_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ten"
+        android:text="@string/login1_title2"
+        android:textSize="@dimen/text_sixteen" />
+
+    <Button
+        android:id="@+id/btn_login1_next"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@drawable/button_style"
+        android:text="@string/login1_button"
+        android:textColor="@color/color_button" />
+</LinearLayout>

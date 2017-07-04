@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_login_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login_title1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ten"
+        android:text=""
+        android:textSize="@dimen/text_twenty" />
+
+    <RelativeLayout
+        android:id="@+id/ll_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_login"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_login_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_username"
+            android:layout_marginTop="@dimen/three"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="@dimen/OneHundredAndTen"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/five"
+            android:layout_toRightOf="@+id/tv_login_username"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/tv_login_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_password"
+            android:layout_marginTop="@dimen/three"
+            android:singleLine="true"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="@dimen/OneHundredAndTen"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/et_username"
+            android:layout_below="@+id/et_username"
+            android:password="true"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_login_language1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_password"
+            android:layout_marginTop="@dimen/Twenty_five"
+            android:text="" />
+
+        <Spinner
+            android:id="@+id/sp_login"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_login_language1"
+            android:layout_alignLeft="@+id/et_password"
+             />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_login_set"
+        android:layout_width="@dimen/thirty"
+        android:layout_height="@dimen/thirty"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/thirty"
+        android:layout_marginRight="@dimen/thirty"
+        android:src="@mipmap/set2" />
+
+
+    <TextView
+        android:id="@+id/tv_login_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text=""
+        android:textSize="@dimen/text_twenty" />
+
+    <ImageView
+        android:id="@+id/iv_login"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignRight="@+id/ll_login2"
+        android:layout_below="@+id/tv_login_title2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty"
+        android:background="@drawable/button_style"
+        android:text=""
+        android:textColor="@color/color_button"
+        android:layout_above="@+id/iv_login_set"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

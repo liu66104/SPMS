@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ten">
+
+        <TextView
+            android:id="@+id/tv_power_title_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textSize="@dimen/text_twenty" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="@dimen/ten"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_power_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <ImageView
+                android:id="@+id/iv_day_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/zuoyou"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/fifteen"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_power_month"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_month_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/zuoyou"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/fifteen"
+            android:layout_weight="1">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_power_year"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_year_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/zuoyou"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

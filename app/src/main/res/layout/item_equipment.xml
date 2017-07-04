@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:id="@+id/tv_item_name"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="电站A0101" />
+
+        <RelativeLayout
+            android:id="@+id/rl_item_fault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/five">
+
+            <TextView
+                android:id="@+id/tv_item_fault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="故障"
+                android:textSize="@dimen/text_tweleve" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_equipment"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/five"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_item_fault"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/text_shape_red">
+
+                <TextView
+                    android:textSize="12sp"
+                    android:id="@+id/tv_item_fault_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_item_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/five"
+            android:layout_toLeftOf="@+id/rl_item_fault">
+
+            <TextView
+                android:id="@+id/tv_item_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="正常"
+                android:textSize="@dimen/text_tweleve" />
+
+            <RelativeLayout
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/five"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_item_normal"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/text_shape_green">
+
+                <TextView
+                    android:textSize="12sp"
+                    android:id="@+id/tv_normal_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="25"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/five"
+            android:layout_toLeftOf="@+id/rl_item_normal">
+
+
+            <TextView
+                android:id="@+id/tv_item_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="总数"
+                android:textSize="@dimen/text_tweleve" />
+
+            <RelativeLayout
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="@dimen/five"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_item_num"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/text_shape_blue">
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="12sp"
+                    android:text="1000"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

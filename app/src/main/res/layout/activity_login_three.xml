@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/eighty">
+
+        <TextView
+            android:id="@+id/tv_login3_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/login3_title"
+            android:textSize="@dimen/text_twenty" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/forty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fifty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_login3_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three"
+            android:text="@string/login_loginName" />
+
+        <EditText
+            android:id="@+id/et_login_three"
+            android:layout_width="@dimen/OneHundredAndTen"
+            android:layout_height="wrap_content"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/forty"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_login_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three"
+            android:text="密     码：" />
+
+
+        <EditText
+            android:id="@+id/et_two_login_three"
+            android:layout_width="@dimen/OneHundredAndTen"
+            android:layout_height="wrap_content"
+            android:password="true"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login3_yes"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fifty"
+        android:background="@drawable/button_style"
+        android:text="@string/login3_button"
+        android:textColor="@color/color_button" />
+
+    <Button
+        android:id="@+id/btn_login3_no"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@drawable/button_style1"
+        android:text="@string/login3_button1"
+        android:textColor="@color/color_button" />
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/eighty"
+        android:text="@string/login5_title"
+        android:textSize="@dimen/text_twenty" />
+
+    <LinearLayout
+        android:id="@+id/ll_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/forty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fifty"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_login_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three"
+            android:text="密码：" />
+
+
+        <EditText
+            android:id="@+id/et_login5_password"
+            android:layout_width="@dimen/OneHundredAndTen"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/radioButton1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="@dimen/three"
+            android:background="@drawable/radio_button"
+            android:button="@null"
+            android:checked="false" />
+
+        <TextView
+            android:id="@+id/tv_login5_title1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twenty"
+            android:layout_marginLeft="@dimen/ten"
+            android:text="@string/login5_title1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login5_yes"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/fifty"
+        android:background="@drawable/button_style"
+        android:text="@string/login2_button"
+        android:textColor="@color/color_button" />
+
+    <Button
+        android:id="@+id/btn_login5_no"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@drawable/button_style1"
+        android:text="@string/login2_button1"
+        android:textColor="@color/color_button" />
+
+    <Button
+        android:id="@+id/btn_login5_rewrite"
+        android:layout_width="@dimen/OneHundredAndFiftyOne"
+        android:layout_height="@dimen/thirty"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/twenty"
+        android:background="@drawable/button_style"
+        android:text="@string/login5_button"
+        android:textColor="@color/color_button" />
+</LinearLayout>

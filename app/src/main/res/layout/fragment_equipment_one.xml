@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+    <!--逆变器状态-->
+    <LinearLayout
+        android:id="@+id/ll_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_equipment_two"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:background="@color/background">
+            <TextView
+                android:singleLine="true"
+                android:maxEms="10"
+                android:ellipsize="end"
+                android:id="@+id/tv_equipment_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_twenty" />
+            <ImageView
+                android:id="@+id/iv_point"
+                android:layout_width="@dimen/Twenty_five"
+                android:layout_height="@dimen/Twenty_five"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/twelve"
+                android:src="@mipmap/menu" />
+
+            <ImageView
+                android:id="@+id/iv_search_equipment"
+                android:layout_width="@dimen/Twenty_five"
+                android:layout_height="@dimen/Twenty_five"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_point"
+                android:src="@mipmap/search" />
+        </RelativeLayout>
+
+        <com.example.administrator.spms.refresh.TwoPullToRefresh
+            android:id="@+id/refresh_equipment_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/allview_refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+            <com.example.administrator.spms.refresh.PullableListView
+                android:id="@+id/lv_equipment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/color_operate"
+                android:dividerHeight="@dimen/one">
+            </com.example.administrator.spms.refresh.PullableListView>
+
+
+            <include layout="@layout/allview_load_more" />
+
+
+        </com.example.administrator.spms.refresh.TwoPullToRefresh>
+
+
+    </LinearLayout>
+
+
+    <!--逆变器列表-->
+    <LinearLayout
+        android:id="@+id/ll_equipment_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:background="@color/background">
+
+            <ImageView
+                android:id="@+id/iv_back_equipment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@mipmap/back_two" />
+
+            <RelativeLayout
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+
+                <TextView
+                    android:layout_width="215dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_twenty" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_point2"
+                android:layout_width="@dimen/Twenty_five"
+                android:layout_height="@dimen/Twenty_five"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/twelve"
+                android:src="@mipmap/menu" />
+
+            <ImageView
+                android:id="@+id/iv_search_equipment_two"
+                android:layout_width="@dimen/Twenty_five"
+                android:layout_height="@dimen/Twenty_five"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/twelve"
+                android:layout_toLeftOf="@+id/iv_point2"
+                android:src="@mipmap/search" />
+
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="215dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/tv_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.example.administrator.spms.refresh.TwoPullToRefresh
+                android:id="@+id/refresh_equipment_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/allview_refresh_head" />
+                <!-- 支持所有实现Pullable接口的View -->
+
+                <com.example.administrator.spms.refresh.PullableListView
+                    android:id="@+id/lv_equipment_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/color_operate"
+                    android:dividerHeight="@dimen/one">
+
+
+                </com.example.administrator.spms.refresh.PullableListView>
+
+                <include layout="@layout/allview_load_more" />
+            </com.example.administrator.spms.refresh.TwoPullToRefresh>
+
+
+            <ImageView
+                android:id="@+id/iv_top_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/twelve"
+                android:layout_marginRight="@dimen/twelve"
+                android:alpha="0.8"
+                android:src="@mipmap/top" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+    <!--搜索布局-->
+    <LinearLayout
+        android:id="@+id/ll_equipment_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:background="@color/background">
+
+            <ImageView
+                android:id="@+id/iv_back_search_equipment"
+                android:layout_width="@dimen/Twenty_five"
+                android:layout_height="@dimen/Twenty_five"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@mipmap/back_two" />
+
+            <TextView
+                android:singleLine="true"
+                android:maxEms="10"
+                android:ellipsize="end"
+                android:id="@+id/tv_equipment_title_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_twenty" />
+        </RelativeLayout>
+
+
+        <com.example.administrator.spms.base.SearchView
+            android:id="@+id/main_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.administrator.spms.base.SearchView>
+
+        <ListView
+            android:id="@+id/main_lv_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+    <!--逆变器列表的搜索布局-->
+    <LinearLayout
+        android:id="@+id/ll_search_equipment_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:background="@color/background">
+
+            <ImageView
+                android:id="@+id/iv_back_search_equipment_two"
+                android:layout_width="@dimen/Twenty_five"
+                android:layout_height="@dimen/Twenty_five"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@mipmap/back_two" />
+
+            <RelativeLayout
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/rv_search_equipment_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:singleLine="true"
+                    android:text="xx001第一个电站第一个电站第一个"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_twenty" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.example.administrator.spms.base.SearchViewEquipment
+            android:id="@+id/main_search_layout_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.administrator.spms.base.SearchViewEquipment>
+
+        <ListView
+            android:id="@+id/main_lv_search_results_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_top_equipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:alpha="0.8"
+        android:src="@mipmap/top" />
+
+    <!--逆变器的详情-->
+
+    <LinearLayout
+        android:id="@+id/ll_equipment_three"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_equipment_two"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:background="@color/background">
+            <ImageView
+                android:id="@+id/iv_back_equipment_three"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/twelve"
+                android:src="@mipmap/back_two" />
+
+
+            <RelativeLayout
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <!--<Spinner-->
+                <!--android:id="@+id/tv_equ_title3"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="@dimen/text_twenty" />-->
+                <TextView
+                    android:id="@+id/tv_equipment_title_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_twenty" />
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_point3"
+                android:layout_width="@dimen/Twenty_five"
+                android:layout_height="@dimen/Twenty_five"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/twelve"
+                android:src="@mipmap/menu" />
+
+        </RelativeLayout>
+        <com.example.administrator.spms.refresh.TwoPullToRefresh
+            android:id="@+id/refresh_equipment_three"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/allview_refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+            <com.example.administrator.spms.refresh.PullableScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/twenty">
+
+                        <!--向上-->
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/iv_eqm_up"
+                            android:layout_width="@dimen/Twenty_five"
+                            android:layout_height="@dimen/Twenty_five"
+                            android:layout_marginRight="@dimen/thirty"
+                            android:layout_toLeftOf="@+id/rl_equipment_tag"
+                            android:src="@mipmap/shang" />
+
+                        <ImageView
+                            android:id="@+id/iv_eqm_up1"
+                            android:layout_width="@dimen/Twenty_five"
+                            android:layout_height="@dimen/Twenty_five"
+                            android:layout_marginRight="@dimen/thirty"
+                            android:layout_toLeftOf="@+id/rl_equipment_tag"
+                            android:src="@mipmap/up1"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_equipment_tag"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true">
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/iv_red_point"
+                                    android:layout_width="@dimen/fifteen"
+                                    android:layout_height="@dimen/fifteen"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/text_shape_blue" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_tttt"
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="@dimen/five"
+                                    android:layout_toRightOf="@+id/iv_red_point">
+
+                                    <TextView
+                                        android:id="@+id/tv_name_equipment_three"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textSize="22sp" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <!--向下-->
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/iv_eqm_down"
+                            android:layout_width="@dimen/Twenty_five"
+                            android:layout_height="@dimen/Twenty_five"
+                            android:layout_marginLeft="@dimen/twenty"
+                            android:layout_toRightOf="@+id/rl_equipment_tag"
+                            android:src="@mipmap/xia" />
+
+                        <ImageView
+                            android:id="@+id/iv_eqm_down1"
+                            android:layout_width="@dimen/Twenty_five"
+                            android:layout_height="@dimen/Twenty_five"
+                            android:layout_marginLeft="@dimen/twenty"
+                            android:layout_toRightOf="@+id/rl_equipment_tag"
+                            android:src="@mipmap/down1"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/thirty">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_nibianqi"
+                                android:visibility="gone"
+                                android:layout_width="60dp"
+                                android:layout_height="80dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="@dimen/fifty"
+                                android:background="@mipmap/nibianqi" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_station_equipment_three"
+                                android:layout_width="150dp"
+                                android:layout_height="33dp"
+                                android:text="" />
+
+                            <TextView
+                                android:id="@+id/tv_equipment_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_station_equipment_three"
+                                android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                android:text="" />
+
+                            <TextView
+                                android:id="@+id/tv_equipment_three_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_equipment_three"
+                                android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                android:text="" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="15dp">
+                        <RelativeLayout
+                            android:id="@+id/rl_eq1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <TextView
+                                android:id="@+id/tv_InputPowerStr"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/iv_equipment_tag"
+                                android:text=""
+                                android:textSize="14sp" />
+
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_equipment_tag"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/twelve"
+                                android:src="@mipmap/gonglv" />
+                            <RelativeLayout
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_kw_equipment_three"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="" />
+                            </RelativeLayout>
+
+
+
+                            <TextView
+                                android:id="@+id/tv_num_equipment_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="60dp"
+                                android:layout_centerVertical="true"
+                                android:text=""
+                                android:textSize="@dimen/text_sixteen" />
+
+
+                            <View
+                                android:id="@+id/tag_equipment_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:layout_marginTop="49dp"
+                                android:background="@color/color_operate" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_eq1"
+                            android:id="@+id/rl_eq2"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <TextView
+                                android:id="@+id/tv_PowerStr"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_toRightOf="@+id/iv_equipment_tag2"
+                                android:text=""
+                                android:textSize="14sp" />
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_equipment_tag2"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/twelve"
+                                android:src="@mipmap/gonglv" />
+
+                            <RelativeLayout
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_kw2_equipment_three"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="" />
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_Power"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="60dp"
+                                android:text=""
+                                android:textSize="@dimen/text_sixteen" />
+
+                            <View
+                                android:id="@+id/tag2_equipment_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:layout_marginTop="49dp"
+                                android:background="@color/color_operate" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_eq2"
+                            android:id="@+id/rl_eq3"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+                            <TextView
+                                android:id="@+id/tv_TransferEfficiencyStr"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_toRightOf="@+id/iv_equipment_tag3"
+                                android:text=""
+                                android:textSize="14sp" />
+
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_equipment_tag3"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/twelve"
+                                android:src="@mipmap/zhuanhuan" />
+
+                            <RelativeLayout
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_kw3_equipment_three"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="" />
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_TransferEfficiency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="60dp"
+                                android:text=""
+                                android:textSize="@dimen/text_sixteen" />
+
+                            <View
+                                android:id="@+id/tag3_equipment_three"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:layout_marginTop="49dp"
+                                android:background="@color/color_operate" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                             android:layout_below="@+id/rl_eq3"
+                             android:id="@+id/rl_eq4"
+                             android:layout_width="match_parent"
+                             android:layout_height="50dp">
+
+
+                             <TextView
+                                 android:id="@+id/tv_WorkingTemperatureStr"
+                                 android:layout_width="150dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_centerVertical="true"
+                                 android:layout_marginLeft="@dimen/five"
+                                 android:layout_toRightOf="@+id/iv_equipment_tag4"
+                                 android:text=""
+                                 android:textSize="14sp" />
+
+
+                             <ImageView
+                                 android:visibility="gone"
+                                 android:id="@+id/iv_equipment_tag4"
+                                 android:layout_width="30dp"
+                                 android:layout_height="30dp"
+                                 android:layout_centerVertical="true"
+                                 android:layout_marginLeft="@dimen/twelve"
+                                 android:src="@mipmap/huanjing" />
+
+                             <RelativeLayout
+                                 android:layout_centerVertical="true"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_marginRight="10dp"
+                                 android:layout_width="40dp"
+                                 android:layout_height="wrap_content">
+                                 <TextView
+                                     android:id="@+id/tv_kw4_equipment_three"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:text="" />
+                             </RelativeLayout>
+
+
+                             <TextView
+                                 android:layout_centerVertical="true"
+                                 android:id="@+id/tv_WorkingTemperature"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_marginRight="60dp"
+                                 android:text=""
+                                 android:textSize="@dimen/text_sixteen" />
+
+                             <View
+                                 android:id="@+id/tag4_equipment_three"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/one"
+                                 android:layout_marginTop="49dp"
+                                 android:background="@color/color_operate"
+                                 android:divider="@color/color_operate" />
+
+                         </RelativeLayout>
+                        <RelativeLayout
+                             android:layout_below="@+id/rl_eq4"
+                             android:id="@+id/rl_eq5"
+                             android:layout_width="match_parent"
+                             android:layout_height="50dp">
+                             <TextView
+                                 android:id="@+id/tv_DayPowerGenerationStr"
+                                 android:layout_width="150dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_centerVertical="true"
+                                 android:layout_marginLeft="@dimen/five"
+                                 android:layout_toRightOf="@+id/iv_equipment_tag5"
+                                 android:text=""
+                                 android:textSize="14sp" />
+
+
+                             <ImageView
+                                 android:visibility="gone"
+                                 android:id="@+id/iv_equipment_tag5"
+                                 android:layout_width="30dp"
+                                 android:layout_height="30dp"
+                                 android:layout_centerVertical="true"
+                                 android:layout_marginLeft="@dimen/twelve"
+                                 android:src="@mipmap/fadianliang" />
+                             <RelativeLayout
+                                 android:layout_centerVertical="true"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_marginRight="10dp"
+                                 android:layout_width="40dp"
+                                 android:layout_height="wrap_content">
+                                 <TextView
+                                     android:id="@+id/tv_kw5_equipment_three"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:text="" />
+                             </RelativeLayout>
+
+
+                             <TextView
+                                 android:id="@+id/textView4"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_centerVertical="true"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_marginRight="60dp"
+                                 android:text=""
+                                 android:textSize="@dimen/text_sixteen" />
+
+                             <View
+                                 android:id="@+id/tag5_equipment_three"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/one"
+                                 android:layout_marginTop="49dp"
+                                 android:background="@color/color_operate"
+                                 android:divider="@color/color_operate" />
+
+                         </RelativeLayout>
+                        <RelativeLayout
+                             android:id="@+id/rl_eq6"
+                             android:layout_below="@+id/rl_eq5"
+                             android:layout_width="match_parent"
+                             android:layout_height="50dp">
+                             <TextView
+                                 android:id="@+id/tv_TotalPowerGenerationStr"
+                                 android:layout_width="150dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginLeft="@dimen/five"
+                                 android:layout_centerVertical="true"
+                                 android:layout_toRightOf="@+id/iv_equipment_tag6"
+                                 android:text=""
+                                 android:textSize="14sp" />
+
+
+                             <ImageView
+                                 android:visibility="gone"
+                                 android:id="@+id/iv_equipment_tag6"
+                                 android:layout_width="30dp"
+                                 android:layout_height="30dp"
+                                 android:layout_centerVertical="true"
+                                 android:layout_marginLeft="@dimen/twelve"
+                                 android:src="@mipmap/fadianliang" />
+
+                             <RelativeLayout
+                                 android:layout_centerVertical="true"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_marginRight="10dp"
+                                 android:layout_width="40dp"
+                                 android:layout_height="wrap_content">
+                                 <TextView
+                                     android:id="@+id/tv_kw6_equipment_three"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:text="" />
+                             </RelativeLayout>
+
+
+                             <TextView
+                                 android:id="@+id/textView5"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_centerVertical="true"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_marginRight="60dp"
+                                 android:text=""
+                                 android:textSize="@dimen/text_sixteen" />
+                             <View
+                                 android:id="@+id/tag6_equipment_three"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/one"
+                                 android:layout_marginTop="49dp"
+                                 android:background="@color/color_operate"
+                                 android:divider="@color/color_operate" />
+
+                         </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.example.administrator.spms.refresh.PullableScrollView>
+
+            <include layout="@layout/allview_load_more" />
+        </com.example.administrator.spms.refresh.TwoPullToRefresh>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

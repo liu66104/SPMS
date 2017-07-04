@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/ll_alert"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="@dimen/five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_alert_time"
+            android:text="16/10/21 18:26:00"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/v_alert"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/black"
+            android:layout_width="2dp"
+            android:layout_height="@dimen/fifteen"/>
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_alert_station"
+            android:layout_marginLeft="10dp"
+            android:text="Y1B10电站"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="@dimen/five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_alert_equipment"
+            android:text="xx001_NBQ005"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:id="@+id/v_alert2"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/black"
+            android:layout_width="2dp"
+            android:layout_height="15dp"/>
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_alert_tagName"
+            android:layout_marginLeft="10dp"
+            android:text="NBQ001 : LD-NBQZT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="@dimen/five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_alert_desc"
+            android:text="逆变器1发电量偏低"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

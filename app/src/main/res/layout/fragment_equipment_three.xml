@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:background="@color/background">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="研华光伏智能电站"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_twenty" />
+
+        <ImageView
+            android:id="@+id/iv_point"
+            android:layout_width="@dimen/Twenty_five"
+            android:layout_height="@dimen/Twenty_five"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/twelve"
+            android:src="@mipmap/menu" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twenty">
+
+        <TextView
+            android:id="@+id/tv_name_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="逆变器1"
+            android:textSize="@dimen/text_twenty" />
+
+        <ImageView
+            android:layout_width="@dimen/fifteen"
+            android:layout_height="@dimen/fifteen"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/five"
+            android:layout_toLeftOf="@+id/tv_name_equipment_three"
+            android:background="@drawable/text_shape_green" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/thirty"
+                android:background="@mipmap/nibianqi" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_station_equipment_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电站:A0102" />
+
+            <TextView
+                android:id="@+id/tv_equipment_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_station_equipment_three"
+                android:layout_marginTop="@dimen/ten"
+                android:text="厂商:华为" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_equipment_three"
+                android:layout_marginTop="@dimen/ten"
+                android:text="型号:SUN2000-40KTL" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginTop="@dimen/ten"
+            android:text="直流输入功率" />
+
+        <TextView
+            android:id="@+id/tv_kw_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/twelve"
+            android:layout_marginTop="@dimen/ten"
+            android:text="kw" />
+
+        <TextView
+            android:id="@+id/tv_num_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_kw_equipment_three"
+            android:layout_marginRight="@dimen/five"
+            android:layout_toLeftOf="@+id/tv_kw_equipment_three"
+            android:text="120"
+            android:textSize="@dimen/text_sixteen" />
+
+
+        <View
+            android:id="@+id/tag_equipment_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one"
+            android:layout_below="@+id/tv_kw_equipment_three"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/lisView_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag_equipment_three"
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="交流输出功率" />
+
+        <TextView
+            android:id="@+id/tv_kw2_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_kw_equipment_three"
+            android:layout_below="@+id/tag_equipment_three"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="kw" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_kw2_equipment_three"
+            android:layout_alignRight="@+id/tv_num_equipment_three"
+            android:text="98"
+            android:textSize="@dimen/text_sixteen" />
+
+        <View
+            android:id="@+id/tag2_equipment_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one"
+            android:layout_below="@+id/tv_kw2_equipment_three"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/lisView_color" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag2_equipment_three"
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="转换效率" />
+
+        <TextView
+            android:id="@+id/tv_kw3_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_kw_equipment_three"
+            android:layout_below="@+id/tag2_equipment_three"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_kw3_equipment_three"
+            android:layout_alignRight="@+id/tv_num_equipment_three"
+            android:text="98.8"
+            android:textSize="@dimen/text_sixteen" />
+
+        <View
+            android:id="@+id/tag3_equipment_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one"
+            android:layout_below="@+id/tv_kw3_equipment_three"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/lisView_color" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag3_equipment_three"
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="机内温度" />
+
+        <TextView
+            android:id="@+id/tv_kw4_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_kw_equipment_three"
+            android:layout_below="@+id/tag3_equipment_three"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="℃" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_kw4_equipment_three"
+            android:layout_alignRight="@+id/tv_num_equipment_three"
+            android:text="431"
+            android:textSize="@dimen/text_sixteen" />
+
+        <View
+            android:id="@+id/tag4_equipment_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one"
+            android:layout_below="@+id/tv_kw4_equipment_three"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/lisView_color" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag4_equipment_three"
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="今日发电量" />
+
+        <TextView
+            android:id="@+id/tv_kw5_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_kw_equipment_three"
+            android:layout_below="@+id/tag4_equipment_three"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="kwh" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_kw5_equipment_three"
+            android:layout_alignRight="@+id/tv_num_equipment_three"
+            android:text="23"
+            android:textSize="@dimen/text_sixteen" />
+
+        <View
+            android:id="@+id/tag5_equipment_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one"
+            android:layout_below="@+id/tv_kw5_equipment_three"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/lisView_color" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag5_equipment_three"
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="累计发电量" />
+
+        <TextView
+            android:id="@+id/tv_kw6_equipment_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_kw_equipment_three"
+            android:layout_below="@+id/tag5_equipment_three"
+            android:layout_marginTop="@dimen/twenty"
+            android:text="kwh" />
+
+        <View
+            android:id="@+id/tag6_equipment_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one"
+            android:layout_below="@+id/tv_kw6_equipment_three"
+            android:layout_marginTop="@dimen/ten"
+            android:background="@color/lisView_color" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tag6_equipment_three"
+            android:layout_alignEnd="@+id/textView4"
+            android:layout_alignRight="@+id/textView4"
+            android:text="605"
+            android:textSize="@dimen/text_sixteen" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

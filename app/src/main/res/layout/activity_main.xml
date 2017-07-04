@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.spms.activity.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11.3">
+
+    </android.support.v4.view.ViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one"
+        android:background="@color/account_info_line" />
+
+    <android.support.design.widget.TabLayout
+        android:background="@color/colorBackground"
+        android:id="@+id/tl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.design.widget.TabLayout>
+
+</LinearLayout>

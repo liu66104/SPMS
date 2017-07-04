@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty">
+
+        <ImageView
+            android:layout_marginLeft="@dimen/twelve"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_twenty"
+            android:layout_centerInParent="true"
+            android:text="研华光伏智能电站"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@mipmap/menu"
+            android:id="@+id/iv_point"
+            android:layout_marginRight="@dimen/twelve"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/Twenty_five"
+            android:layout_height="@dimen/Twenty_five" />
+
+        <ImageView
+            android:layout_marginRight="@dimen/twelve"
+            android:src="@mipmap/search"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_point"
+            android:layout_width="@dimen/Twenty_five"
+            android:layout_height="@dimen/Twenty_five" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty">
+
+        <TextView
+            android:textSize="@dimen/text_twenty"
+            android:layout_centerHorizontal="true"
+            android:text="逆变器列表"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="@color/lisView_color"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/lv_equipment_two"
+        android:dividerHeight="@dimen/one"
+        android:divider="@color/lisView_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</LinearLayout>

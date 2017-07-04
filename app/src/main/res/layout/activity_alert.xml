@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back_equipment"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/twelve"
+            android:src="@mipmap/back_two" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/search_et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/search_edittext_shape"
+                android:drawableLeft="@mipmap/search_icon"
+                android:hint="请输入关键字"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/search_iv_delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/iv_delete_bg"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/search_btn_back"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_search_bg"
+            android:text="搜索"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_gray">
+
+
+        <RelativeLayout
+            android:id="@+id/ll1"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/change_black">
+
+            <TextView
+                android:id="@+id/tv_alarm_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="日期时间"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_alarm_1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="日期时间"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#A09F9F" />
+
+            <ImageView
+                android:id="@+id/iv_ll1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/view"
+                android:layout_toStartOf="@+id/view"
+                android:src="@mipmap/lan" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ll2"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/ll1"
+            android:background="@drawable/change_black">
+
+            <TextView
+                android:id="@+id/tv_alarm_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="电站"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_alarm_2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="电站"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_ll2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:src="@mipmap/lan" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#A09F9F" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll3"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/ll2"
+            android:background="@drawable/change_black">
+
+            <TextView
+                android:id="@+id/tv_alarm_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="设备"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_alarm_3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="设备"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_ll3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:src="@mipmap/lan" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#A09F9F" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll4"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/ll3"
+            android:background="@drawable/change_black">
+
+            <TextView
+                android:id="@+id/tv_alarm_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="站点名称"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_alarm_4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="站点名称"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_ll4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:src="@mipmap/lan" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#A09F9F" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll5"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/ll4"
+            android:background="@drawable/change_black">
+
+            <TextView
+                android:id="@+id/tv_alarm_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/tv_alarm_5_1"
+                android:layout_toRightOf="@+id/tv_alarm_5_1"
+                android:text="报警描述"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_alarm_5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="报警描述"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_ll5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:src="@mipmap/lan" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <ListView
+            android:id="@+id/lv_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+        </ListView>
+    </LinearLayout>
+
+
+</LinearLayout>
